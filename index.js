@@ -27,6 +27,8 @@ module.exports = function (opts) {
   var changing = false
   change()
   var ev = new EventEmitter
+  ev.log = opts.log
+  ev.db = opts.db
   return ev
 
   function change () {

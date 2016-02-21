@@ -8,11 +8,17 @@
     "test": "test"
   },
   "dependencies": {
-    "hyperlog": "^4.8.0",
     "hyperlog-index": "^5.0.0",
-    "memdb": "^1.3.1"
+    "pump": "^1.0.1",
+    "subleveldown": "^2.1.0",
+    "through2": "^2.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "hyperlog": "^4.8.0",
+    "memdb": "^1.3.1",
+    "parse-torrent": "^5.7.1",
+    "ssb-keys": "^4.0.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
