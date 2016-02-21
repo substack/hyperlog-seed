@@ -8,8 +8,6 @@ var sub = require('subleveldown')
 var swarmlog = require('swarmlog')
 
 var db = level('/tmp/webtorrent-mirror.db')
-var hseed = require('../')
-
 var log = swarmlog({
   id: process.argv[2],
   db: sub(db, 'log'),
@@ -17,6 +15,8 @@ var log = swarmlog({
   valueEncoding: 'json',
   hubs: [ 'https://signalhub.mafintosh.com' ]
 })
+
+var hseed = require('../')
 var seeder = hseed({
   db: sub(db, 'seed'),
   log: log,
