@@ -1,11 +1,10 @@
 {
   "name": "hyperlog-seed",
   "version": "1.0.0",
-  "description": "seed blobs embedded in a hyperlog",
+  "description": "seed content hashes embedded in a hyperlog",
   "main": "index.js",
   "directories": {
-    "example": "example",
-    "test": "test"
+    "example": "example"
   },
   "dependencies": {
     "hyperlog-index": "^5.0.0",
@@ -24,5 +23,13 @@
   },
   "keywords": [],
   "author": "substack",
-  "license": "BSD"
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/substack/hyperlog-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/substack/hyperlog-seed/issues"
+  },
+  "homepage": "https://github.com/substack/hyperlog-seed#readme"
 }
