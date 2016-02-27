@@ -14,14 +14,14 @@ module.exports = function (opts) {
     db: sub(opts.db, DEX),
     map: function (row, next) {
       var cmd = map(row.value)
-      if (!cmd) next()
+      if (!cmd) return next()
       if (cmd.type === 'del') {
         sdb.del(cmd.link, next)
         change()
       } else if (cmd.type === 'put') {
         sdb.put(cmd.link, row.key, next)
         change()
-      }
+      } else next()
     }
   })
   var changing = false
