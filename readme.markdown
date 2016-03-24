@@ -56,7 +56,7 @@ var log = swarmlog({
   hubs: [ 'https://signalhub.mafintosh.com' ]
 })
 
-var hseed = require('../')
+var hseed = require('hyperlog-seed')
 var seeder = hseed({
   db: sub(db, 'seed'),
   log: log,
@@ -100,7 +100,8 @@ seeder.on('unseed', function (link) {
   console.log('UNSEED', link)
   var t = parseTorrent(link)
   for (var i = 0; i < client.torrents.length; i++) {
-    if (client[i].infoHash === t.infoHash) client[i].destroy()
+    var c = client.torrents[i]
+    if (c.infoHash === t.infoHash) c.destroy()
   }
 })
 ```
