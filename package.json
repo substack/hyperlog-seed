@@ -1,6 +1,6 @@
 {
   "name": "hyperlog-seed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "seed content hashes embedded in a hyperlog",
   "main": "index.js",
   "directories": {
